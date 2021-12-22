@@ -15,11 +15,10 @@ For example, if the input is 4 then your function should return 10 because 1 + 2
 // Notes
 // Expect any positive number between 1 and 1000.
 
-
 function addUp(num) {
   let sum = 0;
-  if(num>= 1 && num <= 1000){
-    for(let i=1;i<=num;i++){
+  if (num >= 1 && num <= 1000) {
+    for (let i = 1; i <= num; i++) {
       sum = sum + i;
     }
   }

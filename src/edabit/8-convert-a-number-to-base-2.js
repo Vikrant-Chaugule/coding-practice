@@ -20,20 +20,20 @@ binary(10) ➞ "1010"
 
 // Method I
 const binary = (decimal) => {
-    if(decimal === 0 || decimal === 1){
-      return decimal+'';
-    }
-  
-	let arr = [];
-    while(decimal  !== 1){
-      arr.push(decimal % 2);
-      decimal = Math.floor( decimal /2);
-    }
-  arr.push(decimal)
+  if (decimal === 0 || decimal === 1) {
+    return decimal + "";
+  }
+
+  let arr = [];
+  while (decimal !== 1) {
+    arr.push(decimal % 2);
+    decimal = Math.floor(decimal / 2);
+  }
+  arr.push(decimal);
   return arr.reverse().join("");
-}
+};
 
 // Method II
 const binary2 = (decimal) => {
-	return parseInt((decimal).toString(2));
-}
+  return parseInt(decimal.toString(2));
+};

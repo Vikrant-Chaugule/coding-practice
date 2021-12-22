@@ -13,20 +13,17 @@ Create a function that returns the total number of boomerangs in an array.
 // [1, 7, 1, 7, 1, 7, 1]
 // 5 boomerangs (from left to right): [1, 7, 1], [7, 1, 7], [1, 7, 1], [7, 1, 7], and [1, 7, 1]
 
-
 // countBoomerangs([9, 5, 9, 5, 1, 1, 1]) ➞ 2
 
 // countBoomerangs([5, 6, 6, 7, 6, 3, 9]) ➞ 1
 
 // countBoomerangs([4, 4, 4, 9, 9, 9, 9]) ➞ 0
 
-
-
 function countBoomerangs(arr) {
-  let boomerangs = 0; 
-  for(let i=1;i<arr.length-1;i++){
-    if(arr[i-1] === arr[i+1] && arr[i+1] !== arr[i]){
-      boomerangs+=1;
+  let boomerangs = 0;
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i - 1] === arr[i + 1] && arr[i + 1] !== arr[i]) {
+      boomerangs += 1;
     }
   }
   return boomerangs;

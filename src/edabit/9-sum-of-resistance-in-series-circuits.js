@@ -21,7 +21,7 @@ Notes
 */
 
 const seriesResistance = (arr) => {
-    let sum = 0;
-    arr.map(r => sum += r);
-    return sum > 1 ? `${sum} ohms`: `${sum} ohm`;
-  }
+  let sum = 0;
+  arr.map((r) => (sum += r));
+  return sum > 1 ? `${sum} ohms` : `${sum} ohm`;
+};

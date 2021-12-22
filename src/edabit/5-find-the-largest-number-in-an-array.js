@@ -10,15 +10,14 @@ Create a function that takes an array of numbers. Return the largest number in t
 
 // findLargestNum([1000, 1001, 857, 1]) ➞ 1001
 
-
 // Notes
 // Expect either a positive number or zero (there are no negative numbers).
 
 function findLargestNum(arr) {
-  let max=arr[0];
-  for(let i=0;i<arr.length;i++){
-    if(arr[i]>max){
-      max=arr[i];
+  let max = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
     }
   }
   return max;

@@ -13,4 +13,5 @@ timeForMilkAndCookies(new Date(2013, 0, 23)) ➞ false
 timeForMilkAndCookies(new Date(3000, 11, 24)) ➞ true
  */
 
-const timeForMilkAndCookies = (date) => date.getDate() === 24 && date.getMonth() === 11
+const timeForMilkAndCookies = (date) =>
+  date.getDate() === 24 && date.getMonth() === 11;

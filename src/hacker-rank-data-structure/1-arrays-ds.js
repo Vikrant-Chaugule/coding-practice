@@ -9,11 +9,11 @@ Return [3,2,1]
 */
 
 function reverseArray(a) {
-    const length = a.length;
-    if(length === 1) return a;
-    const resultArray = [];
-    for(let i=length-1;i>=0;i--){
-        resultArray.push(a[i]);
-    }
-    return resultArray;
+  const length = a.length;
+  if (length === 1) return a;
+  const resultArray = [];
+  for (let i = length - 1; i >= 0; i--) {
+    resultArray.push(a[i]);
+  }
+  return resultArray;
 }

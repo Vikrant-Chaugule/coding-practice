@@ -16,49 +16,45 @@ Create a function that takes a prime number as input and returns "Strong" if it 
 
 // primalStrength(19) ➞ "Weak"
 
-
 // Notes
-// This definition of strong primes is not to be confused with strong primes as defined in cryptography, which are much more complicated than this. 
+// This definition of strong primes is not to be confused with strong primes as defined in cryptography, which are much more complicated than this.
 // You are all welcome to make a challenge based on cryptographically strong primes.
-
-
 
 function primalStrength(n) {
   let beforePrime = 0;
   let afterPrime = 0;
 
-  for (i=n-1;i>1;i--){
-    if(isPrime(i)){
+  for (i = n - 1; i > 1; i--) {
+    if (isPrime(i)) {
       beforePrime = i;
       break;
     }
   }
 
-  for (i=n+1;;i++){
-    if(isPrime(i)){
+  for (i = n + 1; ; i++) {
+    if (isPrime(i)) {
       afterPrime = i;
       break;
     }
   }
 
   const beforePrimeDiff = n - beforePrime;
-  const afterPrimeDiff = afterPrime -n;
-  
-  if(beforePrimeDiff === afterPrimeDiff){
-    return "Balanced"
-  } else if(beforePrimeDiff > afterPrimeDiff){
-		return "Strong"
-  } else {
-  	return "Weak"
-  }
+  const afterPrimeDiff = afterPrime - n;
 
+  if (beforePrimeDiff === afterPrimeDiff) {
+    return "Balanced";
+  } else if (beforePrimeDiff > afterPrimeDiff) {
+    return "Strong";
+  } else {
+    return "Weak";
+  }
 }
 
-function isPrime(num){
+function isPrime(num) {
   let flag = true;
-  for(i=2;i<num;i++){
-    if(num % i === 0){
-      flag=false;
+  for (i = 2; i < num; i++) {
+    if (num % i === 0) {
+      flag = false;
     }
   }
   return flag;

@@ -14,9 +14,8 @@ Otherwise, return "there is no 7 in the array".
 //sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
 // 97 contains the number seven.
 
-
 function sevenBoom(arr) {
-  if(arr.toString().split("").includes("7")){
+  if (arr.toString().split("").includes("7")) {
     return "Boom!";
   }
   return "there is no 7 in the array";
